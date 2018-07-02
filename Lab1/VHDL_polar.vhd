@@ -1,0 +1,24 @@
+LIBRARY ieee; 
+USE ieee.std_logic_1164.all; 
+
+LIBRARY work; 
+
+ENTITY VHDL_polar IS
+	PORT
+	( 
+		POLARITY_CONTROL, IN_1, IN_2, IN_3, IN_4 : IN BIT;
+		OUT_1, OUT_2, OUT_3, OUT_4: OUT BIT
+	); 
+
+END VHDL_polar; 
+
+ARCHITECTURE polar_gates OF VHDL_polar IS
+
+
+BEGIN
+OUT_1 <= IN_1 XOR POLARITY_CONTROL; 
+OUT_2 <= IN_2 XOR POLARITY_CONTROL; 
+OUT_3 <= IN_3 XOR POLARITY_CONTROL; 
+OUT_4 <= IN_4 XOR POLARITY_CONTROL;
+
+END polar_gates; 
