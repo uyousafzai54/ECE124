@@ -1,0 +1,23 @@
+library ieee; 
+use ieee.std_logic_1164.all; 
+
+entity input_mux is 
+port(
+
+	switcher	: in std_logic; --pushbuttons
+	sum 		: in std_logic_vector(7 downto 0); 
+	full_hex : in std_logic_vector(7 downto 0); 
+	output_hexA : out std_logic_vector(3 downto 0); 
+	output_hexB : out std_logic_vector(3 downto 0);
+); 
+
+end entity input_mux 
+
+architecture input_logic of input_mux is 
+
+begin 
+
+with switcher select 
+	
+	
+	
